@@ -3,17 +3,16 @@ package cursos;
 import java.util.Scanner;
 
 public class CursoSwitch {
-	
-	public static void mostrar(){
+
+	public static void mostrar() {
 		Scanner leerEntradaTeclado = new Scanner(System.in);
 		String opcion = "0";
-		Curso [] arrayItems = new Curso[100];
+		Curso[] arrayItems = new Curso[100];
 		int contador = 0;
-	do {
+		do {
 			CursoMenu.mostrarMenu();
 			// Eligiendo una opcion
 			opcion = leerEntradaTeclado.nextLine();
-		
 			switch (opcion) {
 				case "1":
 					arrayItems = CursoRegistrar.registrar(arrayItems, contador);
@@ -24,7 +23,7 @@ public class CursoSwitch {
 					break;
 				case "3":
 					System.out.println("Entroo Eliminar");
-					// Eliminar un elemento array 
+					// Eliminar un elemento array
 					break;
 				case "4":
 					System.out.println("Entroo Editar");
@@ -35,7 +34,6 @@ public class CursoSwitch {
 				default:
 					System.out.println("Opcion Incorrecta");
 			}
-		}while(!opcion.equals("5"));
-
+		} while (!opcion.equals("5"));
 	}
 }

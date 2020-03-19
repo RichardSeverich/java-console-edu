@@ -3,19 +3,19 @@ package usuarios;
 import java.util.Scanner;
 
 public class UsuarioSwitch {
-	
-	public static void mostrar(){
+
+	public static void mostrar() {
 		Scanner leerEntradaTeclado = new Scanner(System.in);
 		String opcion = "0";
-		
+
 		// Aca estamos importando al usuario.
-		Usuario [] arrayUsuarios = new Usuario[100];
+		Usuario[] arrayUsuarios = new Usuario[100];
 		int contador = 0;
-	do {
+		do {
 			UsuarioMenu.mostrarMenu();
 			// Eligiendo una opcion
 			opcion = leerEntradaTeclado.nextLine();
-		
+
 			switch (opcion) {
 				case "1":
 					arrayUsuarios = UsuarioRegistrar.registrar(arrayUsuarios, contador);
@@ -26,7 +26,7 @@ public class UsuarioSwitch {
 					break;
 				case "3":
 					System.out.println("Entroo Eliminar");
-					// Eliminar un elemento array 
+					// Eliminar un elemento array
 					break;
 				case "4":
 					System.out.println("Entroo Editar");
@@ -37,7 +37,7 @@ public class UsuarioSwitch {
 				default:
 					System.out.println("Opcion Incorrecta");
 			}
-		}while(!opcion.equals("5"));
+		} while (!opcion.equals("5"));
 
 	}
 }

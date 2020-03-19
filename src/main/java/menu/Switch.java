@@ -5,26 +5,24 @@ import java.util.Scanner;
 import cursos.CursoSwitch;
 
 public class Switch {
-	
-	public static void mostrar(){
+
+	public static void mostrar() {
 		Scanner leerEntradaTeclado = new Scanner(System.in);
 		String opcion = "0";
-		
-	do {
+		do {
 			Menu.mostrarMenu();
 			// Eligiendo una opcion
 			opcion = leerEntradaTeclado.nextLine();
-		
 			switch (opcion) {
 				case "1":
-                     UsuarioSwitch.mostrar();
+					UsuarioSwitch.mostrar();
 					break;
 				case "2":
-				    CursoSwitch.mostrar();
+					CursoSwitch.mostrar();
 					break;
 				case "3":
 					System.out.println("Entroo Eliminar");
-					// Eliminar un elemento array 
+					// Eliminar un elemento array
 					break;
 				case "4":
 					System.out.println("Entroo Editar");
@@ -35,7 +33,6 @@ public class Switch {
 				default:
 					System.out.println("Opcion Incorrecta");
 			}
-		}while(!opcion.equals("5"));
-
+		} while (!opcion.equals("5"));
 	}
 }

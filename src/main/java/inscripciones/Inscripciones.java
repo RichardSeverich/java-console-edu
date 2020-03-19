@@ -1,4 +1,5 @@
 package inscripciones;
+
 import usuarios.Usuario;
 import cursos.Curso;
 
