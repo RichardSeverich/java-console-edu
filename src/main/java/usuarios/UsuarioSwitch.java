@@ -1,6 +1,7 @@
 package usuarios;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class UsuarioSwitch {
 
@@ -9,8 +10,8 @@ public class UsuarioSwitch {
 		String opcion = "0";
 
 		// Aca estamos importando al usuario.
-		Usuario[] arrayUsuarios = new Usuario[100];
-		int contador = 0;
+		// Usuario[] arrayUsuarios = new Usuario[100];
+		ArrayList<Usuario> arrayUsuarios = new ArrayList();
 		do {
 			UsuarioMenu.mostrarMenu();
 			// Eligiendo una opcion
@@ -18,15 +19,13 @@ public class UsuarioSwitch {
 
 			switch (opcion) {
 				case "1":
-					arrayUsuarios = UsuarioRegistrar.registrar(arrayUsuarios, contador);
-					contador = UsuarioRegistrar.contadorStatic;
+					arrayUsuarios = UsuarioRegistrar.registrar(arrayUsuarios);
 					break;
 				case "2":
-					UsuarioMostrar.mostrar(arrayUsuarios, contador);
+					UsuarioMostrar.mostrar(arrayUsuarios);
 					break;
 				case "3":
-					System.out.println("Entroo Eliminar");
-					// Eliminar un elemento array
+					arrayUsuarios = UsuarioEliminar.eliminar(arrayUsuarios);
 					break;
 				case "4":
 					System.out.println("Entroo Editar");

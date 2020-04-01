@@ -1,12 +1,11 @@
 package usuarios;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class UsuarioRegistrar {
 
-	public static int contadorStatic;
-
-	public static Usuario[] registrar(Usuario[] arrayUsuarios, int contador) {
+	public static ArrayList<Usuario> registrar(ArrayList<Usuario> arrayUsuarios) {
 		Scanner leerEntradaTeclado = new Scanner(System.in);
 		System.out.println("Entroo Registrar ");
 		// Añadir usuario
@@ -24,9 +23,7 @@ public class UsuarioRegistrar {
 		System.out.println("Igrese tipo");
 		usuario.tipo = leerEntradaTeclado.nextLine();
 		// Añadir al array de usuarios:
-		arrayUsuarios[contador] = usuario;
-		contador++;
-		contadorStatic = contador;
+		arrayUsuarios.add(usuario);
 		return arrayUsuarios;
 	}
 }
