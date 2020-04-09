@@ -1,13 +1,17 @@
 package cursos;
 
+import java.util.ArrayList;
+
 public class CursoMostrar {
 
-	public static void mostrar(Curso[] arrayCursos, int contador) {
-		System.out.println("Numero      Nombre     limite ");
-		for (int i = 0; i < contador; i = i + 1) {
-			String nombre = arrayCursos[i].nombre;
-			int limite = arrayCursos[i].limite;
-			System.out.println(i + "           " + nombre + "         " + limite);
+	public static void mostrar(ArrayList<Curso> arrayCursos) {
+		System.out.println("Numero      Nombre         limite ");
+		int ind = 0;
+		for (Curso curso : arrayCursos) {
+			String nombre = curso.nombre;
+			int limite = curso.limite;
+			System.out.println(ind + "           " + nombre + "         " + limite);
+			ind++;
 		}
 	}
 }

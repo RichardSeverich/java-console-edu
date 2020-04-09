@@ -1,8 +1,10 @@
 package menu;
 
-import usuarios.UsuarioSwitch;
 import java.util.Scanner;
+
+import usuarios.UsuarioSwitch;
 import cursos.CursoSwitch;
+import inscripciones.InscripcionSwitch;
 
 public class Switch {
 
@@ -11,7 +13,6 @@ public class Switch {
 		String opcion = "0";
 		do {
 			Menu.mostrarMenu();
-			// Eligiendo una opcion
 			opcion = leerEntradaTeclado.nextLine();
 			switch (opcion) {
 				case "1":
@@ -21,18 +22,14 @@ public class Switch {
 					CursoSwitch.mostrar();
 					break;
 				case "3":
-					System.out.println("Entroo Eliminar");
-					// Eliminar un elemento array
+					InscripcionSwitch.mostrar();
 					break;
 				case "4":
-					System.out.println("Entroo Editar");
-					break;
-				case "5":
-					System.out.println("Entroo Salir");
-					break;
+					System.out.println("Programa finalizado");
+					leerEntradaTeclado.close();
 				default:
 					System.out.println("Opcion Incorrecta");
 			}
-		} while (!opcion.equals("5"));
+		} while (!opcion.equals("4"));
 	}
 }

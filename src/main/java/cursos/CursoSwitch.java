@@ -1,39 +1,44 @@
 package cursos;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class CursoSwitch {
+
+	public static ArrayList<Curso> arrayCursos = new ArrayList<>();
 
 	public static void mostrar() {
 		Scanner leerEntradaTeclado = new Scanner(System.in);
 		String opcion = "0";
-		Curso[] arrayItems = new Curso[100];
-		int contador = 0;
+
 		do {
 			CursoMenu.mostrarMenu();
 			// Eligiendo una opcion
 			opcion = leerEntradaTeclado.nextLine();
+
 			switch (opcion) {
 				case "1":
-					arrayItems = CursoRegistrar.registrar(arrayItems, contador);
-					contador = CursoRegistrar.contadorStatic;
+					arrayCursos = CursoRegistrar.registrar(arrayCursos);
 					break;
 				case "2":
-					CursoMostrar.mostrar(arrayItems, contador);
+					CursoMostrar.mostrar(arrayCursos);
 					break;
 				case "3":
-					System.out.println("Entroo Eliminar");
-					// Eliminar un elemento array
+					arrayCursos = CursoEliminar.eliminar(arrayCursos);
 					break;
 				case "4":
-					System.out.println("Entroo Editar");
+					CursoEditar.editar(arrayCursos);
 					break;
 				case "5":
-					System.out.println("Entroo Salir");
+					System.out.println("salio");
 					break;
 				default:
 					System.out.println("Opcion Incorrecta");
 			}
 		} while (!opcion.equals("5"));
+	}
+
+	public static ArrayList<Curso> getArrayCurso() {
+		return arrayCursos;
 	}
 }

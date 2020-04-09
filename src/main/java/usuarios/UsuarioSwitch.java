@@ -5,13 +5,12 @@ import java.util.ArrayList;
 
 public class UsuarioSwitch {
 
+	public static ArrayList<Usuario> arrayUsuarios = new ArrayList<>();
+
 	public static void mostrar() {
 		Scanner leerEntradaTeclado = new Scanner(System.in);
 		String opcion = "0";
 
-		// Aca estamos importando al usuario.
-		// Usuario[] arrayUsuarios = new Usuario[100];
-		ArrayList<Usuario> arrayUsuarios = new ArrayList();
 		do {
 			UsuarioMenu.mostrarMenu();
 			// Eligiendo una opcion
@@ -28,15 +27,18 @@ public class UsuarioSwitch {
 					arrayUsuarios = UsuarioEliminar.eliminar(arrayUsuarios);
 					break;
 				case "4":
-					System.out.println("Entroo Editar");
+					UsuarioEditar.editar(arrayUsuarios);
 					break;
 				case "5":
-					System.out.println("Entroo Salir");
+					System.out.println("salio");
 					break;
 				default:
 					System.out.println("Opcion Incorrecta");
 			}
 		} while (!opcion.equals("5"));
 
+	}
+	public static ArrayList<Usuario> getArrayUsuario() {
+		return arrayUsuarios;
 	}
 }

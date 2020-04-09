@@ -4,7 +4,6 @@ public class UsuarioMenu {
 
 	public static void mostrarMenu() {
 
-		// Imprimir Menu
 		System.out.println("1. Registrar Usuarios");
 		System.out.println("2. Mostrar Usuarios");
 		System.out.println("3. Eliminar Usuarios");
