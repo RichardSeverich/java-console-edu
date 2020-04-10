@@ -38,7 +38,12 @@ public class UsuarioSwitch {
 		} while (!opcion.equals("5"));
 
 	}
+
 	public static ArrayList<Usuario> getArrayUsuario() {
 		return arrayUsuarios;
+	}
+
+	public static void usuarioPredeterminado() {
+		arrayUsuarios = UsuarioPredeterminado.registrar(arrayUsuarios);
 	}
 }

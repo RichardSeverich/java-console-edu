@@ -7,19 +7,19 @@ public class Acceso {
 	public static void mAcceso() {
 
 		Scanner leerEntradaTeclado = new Scanner(System.in);
-		String c = "charly";
-		String i = "123";
-		String a = "a";
-		String b = "b";
+		String usuario = "charly";
+		String contrasena = "123";
+		String user = "a";
+		String password = "b";
 		do {
 			System.out.println("introduzca el usuario");
-			a = leerEntradaTeclado.nextLine();
+			user = leerEntradaTeclado.nextLine();
 			System.out.println("introduzca la contraseña");
-			b = leerEntradaTeclado.nextLine();
-			if ((c.equals(a) == false) || (i.equals(b) == false)) {
+			password = leerEntradaTeclado.nextLine();
+			if ((usuario.equals(user) == false) || (contrasena.equals(password) == false)) {
 				System.out.println("contraseña o usuario incorrecto");
 			}
-		} while ((c.equals(a) == false) || (i.equals(b) == false));
+		} while ((usuario.equals(user) == false) || (contrasena.equals(password) == false));
 		System.out.println("acceso permitido");
 	}
 }

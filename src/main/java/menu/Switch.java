@@ -27,6 +27,7 @@ public class Switch {
 				case "4":
 					System.out.println("Programa finalizado");
 					leerEntradaTeclado.close();
+					break;
 				default:
 					System.out.println("Opcion Incorrecta");
 			}

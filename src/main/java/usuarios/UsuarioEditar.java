@@ -12,6 +12,10 @@ public class UsuarioEditar {
 		int ind = Integer.parseInt(leerEntradaTeclado.nextLine());
 		if (ind < tam && ind >= 0) {
 			Usuario usuario = new Usuario();
+			System.out.println("Ingrese el nickname de usuario");
+			usuario.nick = leerEntradaTeclado.nextLine();
+			System.out.println("Ingrese la contraseña");
+			usuario.password = leerEntradaTeclado.nextLine();
 			System.out.println("Ingrese el nombre Usuario");
 			usuario.nombres = leerEntradaTeclado.nextLine();
 			System.out.println("Ingrese el Apellidos Usuario");
