@@ -2,22 +2,22 @@ package cursos;
 
 import java.util.ArrayList;
 
-import usuarios.Usuario;
+import usuarios.Persona;
 
 public class Curso {
 	public String nombre;
 	public int limite;
-	private ArrayList<Usuario> listaUsuarios;
+	private ArrayList<Persona> listaUsuarios;
 
 	public Curso() {
 		this.listaUsuarios = new ArrayList<>();
 	}
 
-	public void setUsuarios(Usuario usuario) {
+	public void setUsuarios(Persona usuario) {
 		this.listaUsuarios.add(usuario);
 	}
 
-	public ArrayList<Usuario> getUsuariosIsncritos() {
+	public ArrayList<Persona> getUsuariosIsncritos() {
 		return listaUsuarios;
 	}
 }

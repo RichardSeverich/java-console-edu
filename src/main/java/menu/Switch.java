@@ -30,6 +30,8 @@ public class Switch {
 					break;
 				default:
 					System.out.println("Opcion Incorrecta");
+					System.out.println("presione enter para continuar");
+					leerEntradaTeclado.nextLine();
 			}
 		} while (!opcion.equals("4"));
 	}

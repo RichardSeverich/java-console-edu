@@ -12,6 +12,7 @@ public class Acceso {
 		String user = "a";
 		String password = "b";
 		do {
+			System.out.println("******* LOGIN DE USUARIO *******");
 			System.out.println("introduzca el usuario");
 			user = leerEntradaTeclado.nextLine();
 			System.out.println("introduzca la contraseña");

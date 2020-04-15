@@ -3,9 +3,11 @@ package usuarios;
 import java.util.Scanner;
 import java.util.ArrayList;
 
+import utiles.LimpiarPantalla;
+
 public class UsuarioSwitch {
 
-	public static ArrayList<Usuario> arrayUsuarios = new ArrayList<>();
+	public static ArrayList<Persona> arrayUsuarios = new ArrayList<>();
 
 	public static void mostrar() {
 		Scanner leerEntradaTeclado = new Scanner(System.in);
@@ -15,31 +17,38 @@ public class UsuarioSwitch {
 			UsuarioMenu.mostrarMenu();
 			// Eligiendo una opcion
 			opcion = leerEntradaTeclado.nextLine();
-
+			LimpiarPantalla.limpiar();
 			switch (opcion) {
 				case "1":
-					arrayUsuarios = UsuarioRegistrar.registrar(arrayUsuarios);
+					arrayUsuarios = UsuarioRegistrar.registrar(arrayUsuarios, "Administrador");
 					break;
 				case "2":
-					UsuarioMostrar.mostrar(arrayUsuarios);
+					arrayUsuarios = UsuarioRegistrar.registrar(arrayUsuarios, "Estudiante");
 					break;
 				case "3":
-					arrayUsuarios = UsuarioEliminar.eliminar(arrayUsuarios);
+					arrayUsuarios = UsuarioRegistrar.registrar(arrayUsuarios, "Profesor");
 					break;
 				case "4":
-					UsuarioEditar.editar(arrayUsuarios);
+					UsuarioMostrar.mostrar(arrayUsuarios);
 					break;
 				case "5":
+					arrayUsuarios = UsuarioEliminar.eliminar(arrayUsuarios);
+					break;
+				case "6":
+					UsuarioEditar.editar(arrayUsuarios);
+					break;
+				case "7":
 					System.out.println("salio");
 					break;
 				default:
 					System.out.println("Opcion Incorrecta");
 			}
-		} while (!opcion.equals("5"));
-
+			System.out.println("presione enter para continuar");
+			leerEntradaTeclado.nextLine();
+		} while (!opcion.equals("7"));
 	}
 
-	public static ArrayList<Usuario> getArrayUsuario() {
+	public static ArrayList<Persona> getArrayUsuario() {
 		return arrayUsuarios;
 	}
 

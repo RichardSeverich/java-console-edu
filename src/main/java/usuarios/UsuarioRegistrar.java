@@ -5,10 +5,10 @@ import java.util.ArrayList;
 
 public class UsuarioRegistrar {
 
-	public static ArrayList<Usuario> registrar(ArrayList<Usuario> arrayUsuarios) {
+	public static ArrayList<Persona> registrar(ArrayList<Persona> arrayUsuarios, String tipo) {
 		Scanner leerEntradaTeclado = new Scanner(System.in);
-		System.out.println("Entroo Registrar ");
-		Usuario usuario = new Usuario();
+		System.out.println("******* REGISTRO *******");
+		Persona usuario = Fabrica.obtenerInstancia(tipo);
 		System.out.println("Ingrese el nickname de usuario");
 		usuario.nick = leerEntradaTeclado.nextLine();
 		System.out.println("Ingrese la contraseña");
@@ -19,9 +19,8 @@ public class UsuarioRegistrar {
 		usuario.apellidos = leerEntradaTeclado.nextLine();
 		System.out.println("Ingrese edad ");
 		usuario.edad = Integer.parseInt(leerEntradaTeclado.nextLine());
-		System.out.println("Igrese tipo");
-		usuario.tipo = leerEntradaTeclado.nextLine();
 		arrayUsuarios.add(usuario);
+		System.out.println("registrado exitosamente");
 		return arrayUsuarios;
 	}
 }

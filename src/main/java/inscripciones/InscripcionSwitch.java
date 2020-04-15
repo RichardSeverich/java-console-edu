@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 import cursos.Curso;
-import usuarios.Usuario;
+import usuarios.Persona;
 import cursos.CursoSwitch;
 import usuarios.UsuarioSwitch;
 
@@ -14,11 +14,10 @@ public class InscripcionSwitch {
 		Scanner leerEntradaTeclado = new Scanner(System.in);
 		String opcion = "0";
 		ArrayList<Curso> arrayCursos = CursoSwitch.getArrayCurso();
-		ArrayList<Usuario> arrayUsuarios = UsuarioSwitch.getArrayUsuario();
+		ArrayList<Persona> arrayUsuarios = UsuarioSwitch.getArrayUsuario();
 		do {
 			InscripcionMenu.mostrarMenu();
 			opcion = leerEntradaTeclado.nextLine();
-
 			switch (opcion) {
 				case "1":
 					InscripcionRegistrar.registrar(arrayCursos, arrayUsuarios);
@@ -33,6 +32,8 @@ public class InscripcionSwitch {
 					System.out.println("salio correctamente");
 				default:
 					System.out.println("Opcion Incorrecta");
+					System.out.println("presione enter para continuar");
+					leerEntradaTeclado.nextLine();
 			}
 		} while (!opcion.equals("4"));
 	}

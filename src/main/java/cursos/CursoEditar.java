@@ -8,6 +8,7 @@ public class CursoEditar {
 	public static ArrayList<Curso> editar(ArrayList<Curso> arrayCursos) {
 		Scanner leerEntradaTeclado = new Scanner(System.in);
 		int tam = arrayCursos.size();
+		System.out.println("******* EDITAR *******");
 		System.out.println("ingrese el elemento que desea editar");
 		int ind = Integer.parseInt(leerEntradaTeclado.nextLine());
 		if (ind < tam) {
