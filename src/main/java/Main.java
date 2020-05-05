@@ -1,15 +1,17 @@
 import menu.Switch;
 import menu.Acceso;
 
-import usuarios.UsuarioSwitch;
 import cursos.CursoSwitch;
+import usuarios.UsuarioSwitch;
+import inscripciones.InscripcionSwitch;
 
 public class Main {
 
-	public static void main(String[] args) {
-		UsuarioSwitch.usuarioPredeterminado();
-		CursoSwitch.cursoPredeterminado();
-		Acceso.mAcceso();
-		Switch.mostrar();
-	}
+  public static void main(String[] args) {
+    UsuarioSwitch.usuarioPredeterminado();
+    CursoSwitch.cursoPredeterminado();
+    InscripcionSwitch.inscripcionPredeterminado();
+    Acceso.mAcceso();
+    Switch.mostrar();
+  }
 }
