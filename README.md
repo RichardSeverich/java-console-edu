@@ -36,3 +36,28 @@ Este proyecto es modo consola.
 <p align="center">
   <img src="documentation/ui-login.jpg">
 </p>
+
+### Main menu
+
+<p align="center">
+  <img src="documentation/main-menu.jpg">
+</p>
+
+### Users menu
+
+<p align="center">
+  <img src="documentation/users-menu.jpg">
+</p>
+
+### Courses menu
+
+<p align="center">
+  <img src="documentation/courses-menu.jpg">
+</p>
+
+### Enrollment menu
+
+<p align="center">
+  <img src="documentation/enrollment-menu.jpg">
+</p>
+
