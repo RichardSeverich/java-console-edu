@@ -60,4 +60,3 @@ Este proyecto es modo consola.
 <p align="center">
   <img src="documentation/enrollment-menu.jpg">
 </p>
-
