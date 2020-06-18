@@ -34,5 +34,47 @@ Este proyecto es modo consola.
 ### Login
 
 <p align="center">
-  <img src="documentation/ui-login.jpg">
+  <img src="documentacion/ui-login.jpg">
+</p>
+
+### Main menu
+
+<p align="center">
+  <img src="documentacion/menu-main.jpg">
+</p>
+
+### Users menu
+
+<p align="center">
+  <img src="documentacion/menu-users.jpg">
+</p>
+
+### Show users
+
+<p align="center">
+  <img src="documentacion/show-users.jpg">
+</p>
+
+### Courses menu
+
+<p align="center">
+  <img src="documentacion/menu-courses.jpg">
+</p>
+
+### Show courses
+
+<p align="center">
+  <img src="documentacion/show-courses.jpg">
+</p>
+
+### Inscriptions menu
+
+<p align="center">
+  <img src="documentacion/menu-inscriptions.jpg">
+</p>
+
+### Show inscriptions
+
+<p align="center">
+  <img src="documentacion/show-inscriptions.jpg">
 </p>
