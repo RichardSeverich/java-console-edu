@@ -40,23 +40,41 @@ Este proyecto es modo consola.
 ### Main menu
 
 <p align="center">
-  <img src="documentacion/main-menu.jpg">
+  <img src="documentacion/menu-main.jpg">
 </p>
 
 ### Users menu
 
 <p align="center">
-  <img src="documentacion/users-menu.jpg">
+  <img src="documentacion/menu-users.jpg">
+</p>
+
+### Show users
+
+<p align="center">
+  <img src="documentacion/show-users.jpg">
 </p>
 
 ### Courses menu
 
 <p align="center">
-  <img src="documentacion/courses-menu.jpg">
+  <img src="documentacion/menu-courses.jpg">
 </p>
 
-### Enrollment menu
+### Show courses
 
 <p align="center">
-  <img src="documentacion/enrollment-menu.jpg">
+  <img src="documentacion/show-courses.jpg">
+</p>
+
+### Inscriptions menu
+
+<p align="center">
+  <img src="documentacion/menu-inscriptions.jpg">
+</p>
+
+### Show inscriptions
+
+<p align="center">
+  <img src="documentacion/show-inscriptions.jpg">
 </p>
